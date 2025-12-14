@@ -1,26 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpaceShip</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
 
+    <style>
 
+        .audiowide-regular {
+        font-family: "Audiowide", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        #carouselExample .carousel-item img {
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .bg-glass {
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(8.6px);
+            -webkit-backdrop-filter: blur(8.6px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        nav li{
+            font-weight: 500;
+            font-size: 1.5rem;
+            
+        }
+        nav li:hover{
+            transform: scale(1.1);
+            transition: 0.15s;
+            
+
+        }
+        
+        @media (max-width: 991.98px) {
+        .navbar-nav {
+            align-items: center;
+        }
+        }
+
+
+    </style>
 </head>
-<body>
+<body class="text-white"> 
+        <video autoplay muted loop playsinline
+        style="
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            z-index: -1;">
+        <source src="vecteezy_retro-style-80s-sci-fi-background-futuristic-with-laser-grid_11113852.mp4" type="video/mp4">
+    </video>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
-    
-    
+   <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand audiowide-regular" style="font-size: 1.5rem;" href="#">Hope</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Control panel</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link active" href="#">Crew</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link active" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container text-center py-5" style="margin-top: 50px;">
+        <div class="row justify-content-center align-items-center gx-1">
+            <div class="col-auto">
+                <img src="logolight.svg" class="img-fluid">
+            </div>
+            <div class="col-auto">
+                <h1 class="display-1 audiowide-regular m-0">Hope</h1>
+            </div>
+        </div>
+
+
+
+        <figure>
+        <blockquote class="blockquote">
+            <p>Always reach for the stars. Because if you fall, you'll land on a cloud.</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+            Unknown author <cite title="Source Title"></cite>
+        </figcaption>
+        </figure>
+    </div>
+
+    <section class="controlPanel">
+        <div class="container">
+            <div class="row g-5">
+
+                <div class="col-md-8">
+                    <div class="row text-white bg-glass border border-primary-subtle rounded-3 p-2">
+                        <h1>MISSION:</h1>
+                        <h4>SEARCH FOR LIFE ON KEPLER-22b</h4>
+                    </div>
+                    <div class="row text-white bg-glass border border-primary-subtle rounded-3 my-3 p-2">
+                        <h1 class="pb-3">CURRENT STATUS: A</h1>
+                        <video class="pb-2 w-100 border-0 rounded-pill overflow-hidden" style="opacity:0.9" autoplay muted loop src="Space Squad Spaceship Wireframe - Luis Zuleta (1080p, h264).mp4"></video>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row text-center text-white bg-glass border border-primary-subtle rounded-3 p-2 mb-3">
+                                <h1>LATEST EVENTS:</h1>
+                            </div>
+                            <div class="row text-white bg-glass border border-primary-subtle rounded-3">
+                                <div id="carouselExample" class="carousel slide p-3">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="https://images.newscientist.com/wp-content/uploads/2025/11/19132227/SEI_274892798.jpg?crop=4:3,smart&width=1200&height=900&upscale=true" class="d-block w-100 rounded-2" alt="...">
+                                            <h4 class="py-3">11/02/2126 We narrowly avoided an asteroid belt. Minor flight-path change. No damage taken.</h4>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="https://astrophotographylens.com/cdn/shop/articles/vega_star.jpg?v=1708699566&width=1000" class="d-block w-100 rounded-2" alt="...">
+                                            <h4 class="py-3">15/09/2126 We passed by Vega. The telescope mounted on the ship took this picture.</h4>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="https://i.redd.it/7y82z0fcsoi51.jpg" class="d-block w-100 rounded-2" alt="...">
+                                            <h4 class="py-3">30/08/2126 The Oion's arm was close to the path and 4 out of 6 astronauts voted to diverge off of the main path and take this picture.</h4>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                
+                <div class="col-md-4">
+                    <div class="row text-center text-white bg-glass border border-primary-subtle rounded-3 p-2 mb-3">
+                        <h1>
+                            SYSTEMS:
+                        </h1>
+                    </div>
+
+                    <div class="row text-center text-white bg-glass border border-primary-subtle rounded-3 p-2 mb-3">
+                        <h3>
+                            NAVIGATION
+                        </h3>
+                        <div class="text-start ">
+
+                            <div class="row">
+                                <div class="col-md-12 col-6">
+                                    <h5>
+                                        FLIGHT-PATH
+                                    </h5>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul class="list-unstyled">
+                                            <li>DIRECTION-NORTH</li>
+                                            <li>LAST PATH CHANGE-11/02/2126</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul class="list-unstyled">
+                                            <li>NEAREST STOP-2LY</li>
+                                            <li>OVERLAP-NONE</li>
+                                            <li>OBSTACLES-NONE</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="col-md-12 col-6">
+                                    <h5>
+                                        CHARACTERISTICS
+                                    </h5>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul class="list-unstyled">
+                                            <li>NEAREST SHIP-0.00043LY</li>
+                                            <li>NEAREST STAR-VEGA</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul class="list-unstyled">
+                                            <li>NEAREST SOLAR SYSTEM-VEGA</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="ratio ratio-1x2 border rounded-3 overflow-hidden w-50">
+                                    <video autoplay loop muted class="w-100 h-100" style="object-fit: cover;opacity:0.9" src="radar.mp4"></video>
+                                </div>
+                                <div class="ratio ratio-1x1 border rounded-3 overflow-hidden w-50 ">
+                                    <video autoplay loop muted class="w-100 h-100" style="object-fit: cover;opacity:0.9" src="medium-vecteezy_retro-3d-grid-wave-background_21284112_medium.mp4"></video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                      
+                    <div class="row text-center text-white bg-glass border border-primary-subtle rounded-3 p-2 mb-3">
+                        <h3>
+                            LIFE SUPPORT
+                        </h3>
+                        <div class="text-start ">
+
+                            <div class="row">
+                                <div class="col-md-12 col-6">
+                                    <h5>
+                                        ATMOSPHERE:
+                                    </h5>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul class="list-unstyled">
+                                            <li>O2-23%</li>
+                                            <li>CO2-0.05%</li>
+                                            <li>N2-75%</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul class="list-unstyled">
+                                            <li>TEMP-21C</li>
+                                            <li>HUMIDITY-50%</li>
+                                            <li>AIR PRESSURE-100kPa</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-6">
+                                    <h5>
+                                        RATIONS MANAGEMENT:
+                                    </h5>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul class="list-unstyled">
+                                            <li>H20-750L
+                                            </li>
+                                            <li>B E A N S  - 75X</li>
+                                            <li>COFFEE-250L</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul class="list-unstyled">
+                                            <li>TUBE FOOD-150X</li>
+                                            <li>MEDICATIONS - &lt;unknown&gt;</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row text-center text-white bg-glass border border-primary-subtle rounded-3 p-2">
+                        <h3>
+                            COMMUNICATIONS
+                        </h3>
+                        <div class="text-start ">
+                            <div class="row">
+                                <div class="col-md-12 col-6">
+                                <h5>
+                                    CHANNELS
+                                </h5>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                        <li>CH1</li>
+                                        <li>CH2</li>
+                                        <li>CH3</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                        <li>CH1</li>
+                                        <li>CH2</li>
+                                        <li>CH3</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-6">
+                                <h5>
+                                    INNER COMMS
+                                </h5>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                        <li>CR1-ACTIVE</li>
+                                        <li>CR2</li>
+                                        <li>CR3-ACTIVE</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                        <li>CR4-ACTIVE</li>
+                                        <li>CR5-ACTIVE</li>
+                                        <li>CR6</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            
+                        </div>
+                </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

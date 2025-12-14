@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceShip</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    
+    <a href="https://www.vecteezy.com/free-videos/abstract">Abstract Stock Videos by Vecteezy</a>
+
+    <style>
+
+        .audiowide-regular {
+        font-family: "Audiowide", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        #carouselExample .carousel-item img {
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .bg-glass {
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(8.6px);
+            -webkit-backdrop-filter: blur(8.6px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        nav li{
+            font-weight: 500;
+            font-size: 1.5rem;
+            
+        }
+        nav li:hover{
+            transform: scale(1.1);
+            transition: 0.15s;
+            
+
+        }
+        
+        @media (max-width: 991.98px) {
+        .navbar-nav {
+            align-items: center;
+        }
+        }
+
+        .video-box {
+    aspect-ratio: 4 / 3;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.375rem;
+    }
+
+    .video-box video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    </style>
+</head>
+<body class="text-white"> 
+        <video autoplay muted loop playsinline
+        style="
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            z-index: -1;">
+        <source src="\vids\vecteezy_retro-style-80s-sci-fi-background-futuristic-with-laser-grid_11113852.mp4" type="video/mp4">
+    </video>
+
+    <!-- navbar -->
+     
+   <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand audiowide-regular" style="font-size: 1.5rem;" href="index.html">Hope</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html#controlPanel">Control panel</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link active" href="crew.html">Crew</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link active" href="ShipStatus.html">Ship status</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+        <div class="container text-center py-5" style="margin-top: 50px;">
+            <h1 class="display-1 audiowide-regular m-0">SHIP STATUS </h1>
+        </div>
+
+        <!-- control panel -->
+
+    <section id="controlPanel" class="my-5">
+        <div class="container">
+            <div class="row g-5">
+
+<div class="col-lg-8">
+    <div class="row mb-3">
+        <div class="text-white bg-glass border border-primary-subtle rounded-3">
+            <h1 class="pb-3 p-3">CAMERA FEED:</h1>
+
+            <div class="row p-3 g-3">
+                <div class="col-4">
+                    <div class="video-box">
+                        <video autoplay muted loop src="\vids\cockpit.mp4"></video>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="video-box">
+                        <video autoplay muted loop src="\vids\43658-436719135.mp4"></video>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="video-box">
+                        <video autoplay muted loop src="\vids\medium-vecteezy_camera-passing-through-from-spaceship-inside-to-space_2488170_medium.mp4"></video>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row p-3 g-3 pb-4">
+                <div class="col-4">
+                    <div class="video-box">
+                        <video autoplay muted loop src="\vids\medium-vecteezy_loop-motion-of-a-sci-fi-corridor_2014188_medium.mp4"></video>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="video-box">
+                        <video autoplay muted loop src="\vids\medium-vecteezy_ai-generated-futuristic-spaceship-interior-with-glowing_40163479_medium.mp4"></video>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="video-box">
+                        <video autoplay muted loop src="\vids\medium-vecteezy_bright-metal-sci-fi-corridor_3185661_medium.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row text-white bg-glass border border-primary-subtle rounded-3 my-3 p-2">
+                        <h1 class="pb-3">CURRENT STATUS: A</h1>
+                        <video class="pb-2 w-100 border-0 rounded-pill overflow-hidden" style="opacity:0.9" autoplay muted loop src="\vids\Space Squad Spaceship Wireframe - Luis Zuleta (1080p, h264).mp4"></video>
+        </div>
+</div>
+
+
+                
+                <div class="col-lg-4">
+                    <div class="row text-center text-white bg-glass border border-primary-subtle rounded-3 p-2 mb-3">
+                        <h1>
+                            SYSTEMS:
+                        </h1>
+                    </div>
+
+                    <div class="row text-center text-white bg-glass border border-primary-subtle rounded-3 p-2 mb-3">
+                        <h3  class="pb-3">
+                            THRUSTERS
+                        </h3>
+                        <div class="text-start ">
+
+                            <div class="row">
+                                <div class="col-lg-12 col-6">
+                                    <h5>
+                                        OUTER THRUSTERS
+                                    </h5>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <ul class="list-unstyled">
+                                            <li>OUTPUT-<span style="color: rgb(255, 136, 0);">50%</span></li>
+                                            <li>FUEL-<span style="color: rgb(255, 136, 0);">37%</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <ul class="list-unstyled">
+                                            <li>CONSUMPTION-<span style="color: rgb(0, 255, 98);">6%</span></li>
+                                            <li>ERRORS-<span style="color: rgb(0, 255, 98);">NONE</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="col-lg-12 col-6">
+                                    <h5>
+                                        INNER THRUSTERS
+                                    </h5>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <ul class="list-unstyled">
+                                            <li>OUTPUT-<span style="color: rgb(255, 0, 0);">75%</span></li>
+                                            <li>FUEL-<span style="color: rgb(255, 0, 0);">10%</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <ul class="list-unstyled">
+                                            <li>CONSUMPTION-<span style="color: rgb(255, 136, 0);">34%</span></li>
+                                            <li>ERRORS-<span style="color: rgb(255, 136, 0);">MINOR OVERHEATING</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- <div class="row">
+                                <div class="border-0 rounded-3 pb-2">
+                                    <video autoplay loop muted class="w-100 h-100" style="object-fit: cover;opacity:0.9" src="0_3d_Render_Abstract_3840x2160.mp4"></video>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                      
+                    <div class="row text-center text-white bg-glass border border-primary-subtle rounded-3 p-2 mb-3">
+                        <h3  class="pb-3">
+                            POWER
+                        </h3>
+                        <div class="text-start ">
+
+                            <div class="row">
+                                <div class="col-lg-12 col-6">
+                                    <h5 class="pb-2">
+                                        BATTERY CAPACITY
+                                    </h5>
+                                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="background-color: rgb(255, 255, 255, 0.3);">
+                                        <div class="progress-bar-striped progress-bar-animated  w-75" style="background-color: rgb(0, 255, 98);"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-6 pb-3">
+                                    <h5 class="pt-2">
+                                        BATTERY USAGE
+                                    </h5>
+                                    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="background-color: rgb(255, 255, 255, 0.3);">
+                                        <div class="progress-bar-striped progress-bar-animated  w-50" style="background-color: rgb(255, 136, 0);"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row text-center text-white bg-glass border border-primary-subtle rounded-3 p-2">
+                        <h3  class="pb-3">
+                            DEFENCE
+                        </h3>
+                        <div class="text-start ">
+                            <div class="row">
+                                <div class="col-lg-12 col-6">
+                                <h5>
+                                    CHANNELS
+                                </h5>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <ul class="list-unstyled">
+                                        <li>CANNON1-<span style="color: rgb(0, 255, 98);">ACTIVE</span></li>
+                                        <li>CANNON2-<span style="color: rgb(255, 0, 0);">REPAIR NEEDED</span></li>
+                                        <li>CANNON3-<span style="color: rgb(0, 255, 98);">ACTIVE</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <ul class="list-unstyled">
+                                        <li>ASTEROID BLASTER-<span style="color: rgb(255, 136, 0);">INACTIVE</span></li>
+                                        <li>SCANNER-<span style="color: rgb(0, 255, 98);">ACTIVE</span>-<span style="color: rgb(0, 255, 98);">NO ACTIVITY</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-6">
+                                <h5>
+                                    DEFENCE COMMS
+                                </h5>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <ul class="list-unstyled">
+                                        <li>CH1-<span style="color: rgb(255, 136, 0);">INACTIVE</span></li>
+                                        <li>CH2-<span style="color: rgb(255, 136, 0);">INACTIVE</span></li>
+                                        <li>CH3-<span style="color: rgb(255, 136, 0);">INACTIVE</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <ul class="list-unstyled">
+                                        <li>CH4-<span style="color: rgb(255, 136, 0);">INACTIVE</span></li>
+                                        <li>CH5-<span style="color: rgb(255, 136, 0);">INACTIVE</span></li>
+                                        <li>CH6-<span style="color: rgb(255, 136, 0);">INACTIVE</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            
+                        </div>
+                </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
